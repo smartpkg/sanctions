@@ -1,0 +1,31 @@
+{
+  "name": "@smartpkg/sanctions",
+  "version": "0.0.0",
+  "description": "Check whether a wallet address is sanctioned",
+  "main": "dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "smartpkg",
+  "repository": {
+    "url": "https://github.com/smartpkg/sanctions.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.7.1"
+  },
+  "devDependencies": {
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
+  }
+}
